@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaVagas | Portal de Oportunidades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; }
+        .navbar { background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .hero-section { background: linear-gradient(135deg, #0d6efd 0%, #003d99 100%); color: white; padding: 80px 0; }
+        .card-vaga { border: none; border-radius: 12px; transition: transform 0.2s, box-shadow 0.2s; background: #fff; }
+        .card-vaga:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .badge-tipo { font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; }
+        .btn-indicacao { background-color: #e9ecef; color: #495057; border: none; }
+        .btn-indicacao:hover { background-color: #dee2e6; }
+        footer { background-color: #212529; color: #fff; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#"><i class="fas fa-briefcase me-2"></i>ConectaVagas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#">Vagas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Currículos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Instituições</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-outline-primary rounded-pill px-4" href="#">Entrar</a></li>
+                <li class="nav-item ms-lg-2"><a class="btn btn-primary rounded-pill px-4" href="#">Cadastrar</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Sua próxima oportunidade começa aqui.</h1>
+        <p class="lead mb-5">De Jovem Aprendiz a cargos CLT, conectamos talentos às melhores empresas.</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-white p-3 rounded-pill shadow-lg d-flex flex-column flex-md-row gap-2">
+                    <input type="text" class="form-control border-0 px-4" placeholder="Cargo, palavra-chave ou empresa">
+                    <select class="form-select border-0 border-start d-none d-md-block" style="max-width: 200px;">
+                        <option selected>Cidade</option>
+                        <option>São Paulo, SP</option>
+                        <option>Rio de Janeiro, RJ</option>
+                    </select>
+                    <button class="btn btn-primary rounded-pill px-5 py-2 fw-bold">Buscar Vagas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+    <div class="row">
+        <aside class="col-lg-3 d-none d-lg-block">
+            <div class="card border-0 shadow-sm p-4 sticky-top" style="top: 100px;">
+                <h5 class="fw-bold mb-3">Filtros</h5>
+                <label class="form-label fw-semibold">Tipo de Contrato</label>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="aprendiz">
+                    <label class="form-check-label" for="aprendiz">Jovem Aprendiz</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="estagio">
+                    <label class="form-check-label" for="estagio">Estágio</label>
+                </div>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="clt">
+                    <label class="form-check-label" for="clt">CLT (Efetivo)</label>
+                </div>
+                
+                <h5 class="fw-bold mb-3">Modelos de Currículo</h5>
+                <p class="small text-muted">Baixe nossos templates aprovados por RHs:</p>
+                <a href="#" class="btn btn-sm btn-outline-secondary w-100 mb-2 text-start">
+                    <i class="far fa-file-pdf me-2"></i> Modelo Jovem Aprendiz
+                </a>
+                <a href="#" class="btn btn-sm btn-outline-secondary w-100 text-start">
+                    <i class="far fa-file-word me-2"></i> Modelo Profissional CLT
+                </a>
+            </div>
+        </aside>
+
+        <section class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold mb-0">Vagas Recentes</h4>
+                <span class="text-muted">842 oportunidades encontradas</span>
+            </div>
+
+            <div class="card card-vaga p-4 mb-3">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="https://img.freepik.com/vetores-premium/logotipo-da-empresa-abstrato_143582-13.jpg" width="60" class="rounded" alt="Logo Empresa">
+                    </div>
+                    <div class="col">
+                        <span class="badge bg-success-soft text-success badge-tipo bg-light mb-2">Jovem Aprendiz</span>
+                        <h5 class="fw-bold mb-1">Aprendiz Administrativo</h5>
+                        <p class="text-muted mb-0 small"><i class="fas fa-building me-1"></i> TechSolutions Brasil | <i class="fas fa-map-marker-alt ms-2 me-1"></i> São Paulo, SP (Híbrido)</p>
+                    </div>
+                    <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
+                        <button class="btn btn-primary w-100 mb-2">Candidatar-se</button>
+                        <button class="btn btn-indicacao w-100 btn-sm" data-bs-toggle="tooltip" title="Solicitar que sua instituição de ensino te indique para esta vaga">
+                            <i class="fas fa-graduation-cap me-1"></i> Pedir Indicação
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-vaga p-4 mb-3">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="https://img.freepik.com/vetores-premium/logotipo-da-empresa-moderna_143582-15.jpg" width="60" class="rounded" alt="Logo Empresa">
+                    </div>
+                    <div class="col">
+                        <span class="badge bg-info-soft text-info badge-tipo bg-light mb-2">Estágio</span>
+                        <h5 class="fw-bold mb-1">Estágio em Desenvolvimento Front-end</h5>
+                        <p class="text-muted mb-0 small"><i class="fas fa-building me-1"></i> Inova Soft | <i class="fas fa-map-marker-alt ms-2 me-1"></i> Remoto</p>
+                    </div>
+                    <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
+                        <button class="btn btn-primary w-100 mb-2">Candidatar-se</button>
+                        <button class="btn btn-indicacao w-100 btn-sm">
+                            <i class="fas fa-graduation-cap me-1"></i> Pedir Indicação
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-vaga p-4 mb-3">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="https://img.freepik.com/vetores-premium/logotipo-de-design-de-logotipo-de-empresa-de-negocios_143582-11.jpg" width="60" class="rounded" alt="Logo Empresa">
+                    </div>
+                    <div class="col">
+                        <span class="badge bg-primary-soft text-primary badge-tipo bg-light mb-2">CLT - Efetivo</span>
+                        <h5 class="fw-bold mb-1">Analista de Operações Júnior</h5>
+                        <p class="text-muted mb-0 small"><i class="fas fa-building me-1"></i> Logística Global S.A | <i class="fas fa-map-marker-alt ms-2 me-1"></i> Barueri, SP</p>
+                    </div>
+                    <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
+                        <button class="btn btn-primary w-100">Candidatar-se</button>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold text-primary mb-3">ConectaVagas</h5>
+                <p class="small">A plataforma que une a força das instituições de ensino com as necessidades do mercado de trabalho.</p>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">Para Candidatos</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Buscar Vagas</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Dicas de Currículo</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Cursos Grátis</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Instituições Parceiras</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Como indicar alunos</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Portal do Coordenador</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Newsletter</h6>
+                <div class="input-group">
+                    <input type="email" class="form-control form-control-sm" placeholder="Seu e-mail">
+                    <button class="btn btn-primary btn-sm">OK</button>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 border-secondary">
+        <div class="text-center small text-white-50">
+            &copy; 2026 ConectaVagas - Carapicuíba, SP. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

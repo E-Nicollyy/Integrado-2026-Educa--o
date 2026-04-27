@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camila Rocha - Psicologia para Estudantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/static/style.css">
+    <style>
+        :root {
+            --cor-principal: #5a8a8a; /* Tom de verde/azul sereno */
+            --cor-texto: #333;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--cor-texto); }
+        .bg-header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
+        .btn-whatsapp { background-color: #25d366; color: white; border: none; transition: 0.3s; }
+        .btn-whatsapp:hover { background-color: #128c7e; color: white; transform: scale(1.05); }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        section { padding: 80px 0; }
+        .footer { background-color: #12577B; border-top: 4px solid var(--cor-principal); color: aliceblue; }
+        /* Responsividade para imagens */
+        .img-profile { max-width: 400px; width: 100%; border-radius: 20px; object-fit: cover; }
+        @media (max-width: 991px) {
+            section { text-align: center; }
+            .vh-100 { height: auto !important; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="w-100 p-2 fixed-top shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold text-white" href="#">CRP 00/0000</a>
+        
+        <nav class="d-none d-lg-block">
+            <ul class="nav">
+                <li><a class="nav-link text-white" href="#home">Home</a></li>
+                <li><a class="nav-link text-white" href="#quem-sou">Quem sou</a></li>
+                <li><a class="nav-link text-white" href="#atendimento">Auxílio Estudantil</a></li>
+                <li><a class="nav-link text-white" href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <a href="https://wa.me/5511917560555" target="_blank" class="btn btn-whatsapp fw-bold rounded-pill px-4">
+                <i class="fab fa-whatsapp"></i> Agendar
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="home" class="min-vh-100 d-flex align-items-center primeiro">
+    <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                <span class="badge bg-primary mb-3">Apoio para alunos de Escolas Públicas</span>
+                <h1 class="display-4 fw-bold mb-4 fs-1 text-center">Saúde mental acessível para o seu futuro.</h1>
+                <p class="lead mb-4 text-center">Um espaço seguro, profissional e totalmente sigiloso para você lidar com as pressões do dia a dia, estudos e vida pessoal.</p>
+                <div class="d-grid d-md-flex gap-3">
+                    <a href="https://wa.me/5511917560555" class="btn btn-whatsapp btn-lg rounded-pill px-5">Quero conversar no WhatsApp</a>
+                    <a href="#quem-sou" class="btn btn-outline-dark btn-lg rounded-pill px-5">Saiba mais</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 text-center">
+                <img src="./src/images/image.png" alt="Acolhimento" class="img-fluid rounded-circle shadow-lg" style="max-width: 80%; border: 10px solid white;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="quem-sou" class="bg-primary-subtle">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 text-center mb-4 mb-lg-0">
+                <img src="./src/images/image.png" alt="Camila Rocha" class="img-profile shadow">
+            </div>
+            <div class="col-12 col-lg-7">
+                <h2 class="fw-bold mb-4 ps-3">Olá, sou Camila Rocha</h2>
+                <p>Sou psicóloga clínica formada pela UFABC. Minha missão é oferecer uma escuta profunda e ética. Entendo que a vida escolar e a transição para a fase adulta trazem muitos desafios. Por isso, ofereço um <strong>atendimento adaptado</strong> para estudantes que buscam equilíbrio emocional.</p>
+                <p>Atuo com a Psicologia Analítica (Jung), focando no seu amadurecimento e no enfrentamento de questões como ansiedade escolar, conflitos familiares e orientação de carreira.</p>
+                <div class="p-3 bg-light rounded italic">
+                    <small>"Seu processo é protegido por sigilo absoluto, conforme o Código de Ética Profissional."</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="atendimento" class="bg-black">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5 text-white">Como funciona o auxílio?</h2>
+        <div class="row g-4 justify-content-center text-start">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 p-4">
+                    <h3 class="h5 fw-bold text-primary"><i class="fas fa-laptop-house me-2"></i>Terapia Online</h3>
+                    <p class="small">Sessões seguras por vídeo (Google Meet). Ideal para quem precisa de flexibilidade de horários entre as aulas e quer ser atendido de qualquer lugar.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 p-4">
+                    <h3 class="h5 fw-bold text-primary"><i class="fas fa-school me-2"></i>Foco Estudantil</h3>
+                    <p class="small">Apoio específico para ansiedade pré-vestibular, organização de estudos, pressão familiar e autoconhecimento para escolha da profissão.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 p-4">
+                    <h3 class="h5 fw-bold text-primary"><i class="fas fa-shield-alt me-2"></i>Ambiente Seguro</h3>
+                    <p class="small">Tudo o que é dito fica entre nós. Este é um ambiente profissional, livre de julgamentos, focado no seu bem-estar e crescimento.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5 p-4 bg-white shadow-sm rounded">
+            <h4 class="fw-bold mb-3">Como agendar?</h4>
+            <p>Basta clicar no botão abaixo para me chamar no WhatsApp. Se você é aluno de escola pública, mencione no início da conversa para conversarmos sobre as condições de auxílio.</p>
+            <a href="https://wa.me/5511917560555" class="btn btn-whatsapp btn-lg rounded-pill mb-2 mt-3 fs-6">
+                Falar com a Psicóloga agora
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer id="contato" class="footer py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold">Psicóloga Camila Rocha</h5>
+                <p class="small">CRP 00/000000<br>Atendimento Clínico Ético e Profissional.</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold">Contato</h5>
+                <ul class="list-unstyled small">
+                    <li><i class="fab fa-whatsapp me-2"></i> (11) 91756-0555</li>
+                    <li><i class="fas fa-envelope me-2"></i> contato@camilarocha.com.br</li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i> Consultório X / Online</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 text-md-end">
+                <h5 class="fw-bold">Ajuda & Sigilo</h5>
+                <p class="small">Este é um espaço de cuidado. Não tenha receio de pedir ajuda. O primeiro passo para o seu amadurecimento começa aqui.</p>
+                <div class="fs-4">
+                    <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center small text-muted">
+            &copy; 2024 Camila Rocha. Todos os direitos reservados. 
+            <br>Desenvolvido com foco em saúde mental estudantil.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
